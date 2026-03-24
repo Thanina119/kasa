@@ -1,0 +1,47 @@
+.cards {
+    width: 100%;
+    margin-top: 43px;
+    margin-bottom: 50px;
+}
+
+.cards-container {
+    max-width: 1240px;
+    height: auto;
+    border-radius: 25px;
+    background-color: #F6F6F6;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 60px;
+    padding: 50px;
+
+}
+
+.card {
+    width: 100%;
+    height: 340px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.card p {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 18px;
+    color: #FFFFFF;
+    z-index: 1;
+
+}

@@ -1,0 +1,31 @@
+.footer {
+    width: 100%;
+    margin-top: auto;
+    background-color: #000000;
+}
+
+.footer-container {
+    max-width: 1440px;
+    height: 209px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.footer-logo {
+    width: 122px;
+    height: 39px;
+    margin-top: 66px;
+
+
+}
+
+.footer-text {
+    font-family: "Montserrat";
+    weight: 500;
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-top: 28.56px;
+    margin-bottom: 29px;
+}
