@@ -6,6 +6,7 @@
 
 .cards-container {
     max-width: 1240px;
+    margin: 0 auto;
     height: auto;
     border-radius: 25px;
     background-color: #F6F6F6;
@@ -13,6 +14,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 50px 60px;
     padding: 50px;
+    box-sizing: border-box;
 
 }
 

@@ -8,12 +8,14 @@ function Carrousel({ pictures }) {
     const [index, setIndex] = useState(0)
 
     const next = () => {
-        setIndex((index + 1) % pictures.length)
+        setIndex((index + 1) % images.length)
     }
 
     const prev = () => {
-        setIndex((index - 1 + pictures.length) % pictures.length)
+        setIndex((index - 1 + images.length) % images.length)
     }
+
+    const images = pictures.slice(0, 4)
     return (
 
         <div className="carrousel">
@@ -23,14 +25,14 @@ function Carrousel({ pictures }) {
             </button>
 
 
-            <img className="image" src={pictures[index]} alt="logement" />
+            <img className="image" src={images[index]} alt="logement" />
 
 
             <button className="right" onClick={next}>
                 <img src={arrowRight} alt="right" />
             </button>
 
-            <p className="text" >{index + 1} /{pictures.length}</p>
+            <p className="text" >{index + 1} /{images.length}</p>
         </div >
     )
 }
