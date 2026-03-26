@@ -1,16 +1,15 @@
-import bannerImg from "../assets/banner-img.png"
+
 import "../Styles/Banner.css"
 
-function Banner() {
+function Banner({ image, text }) {
     return (
         <div className="banner">
             <div className="banner-container">
 
-                <img src={bannerImg} alt="banner-image" className="img-banner" />
+                <img src={image} alt="banner" className="img-banner" />
 
-                <p className="banner-text">
-                    Chez vous, partout et ailleurs
-                </p>
+                {text && <p className="banner-text">{text}</p>}
+
             </div>
         </div>
 

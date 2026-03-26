@@ -1,58 +1,50 @@
 import "../Styles/LogementInfos.css"
-import host from "../assets/host.png"
-import rate from "../assets/Rate.png"
-import arrow from "../assets/arrow.png"
+import starActive from "../assets/starActive.png"
+import starInactive from "../assets/starInactive.png"
 
-function LogementInfos() {
+
+function LogementInfos({ logement }) {
     return (
         <div>
             <div className="infos-logement" >
-                <div className="bloc1">
+                <div className="log-title">
                     <div className="title-loc" >
-                        <p className="logement-title" >Cozy loft on the Canal Saint-Martain</p>
-                        <p className="logement-loc" >Paris, Île-de-France</p>
+                        <p className="logement-title" >{logement.title}</p>
+                        <p className="logement-loc" >{logement.location}</p>
                     </div >
 
-                    <div className="tags">
-                        <span>Cozy</span>
-                        <span>Canal</span>
-                        <span>Paris 10</span>
+                    <div className="tags-container">
+
+                        {logement.tags.map((tag) => (
+
+                            <span className="tags" key={tag}>{tag}</span>
+
+                        ))}
+
                     </div>
                 </div>
 
 
-                <div className="bloc2">
+                <div className="details-host">
                     <div className="host">
-                        <p className="host-name" >Alexandre Dumas</p>
-                        <img src={host} alt="Host" className="host-img" />
+                        <p className="host-name" >{logement.host.name}</p>
+                        <img src={logement.host.picture} alt="logement.host.name" className="host-img" />
 
                     </div>
 
                     <div className="rating">
-                        <img src={rate} alt="Rate" className="rating" />
+                        <img src={Number(logement.rating) >= 1 ? starActive : starInactive} alt="star" />
+                        <img src={Number(logement.rating) >= 2 ? starActive : starInactive} alt="star" />
+                        <img src={Number(logement.rating) >= 3 ? starActive : starInactive} alt="star" />
+                        <img src={Number(logement.rating) >= 4 ? starActive : starInactive} alt="star" />
+                        <img src={Number(logement.rating) >= 5 ? starActive : starInactive} alt="star" />
                     </div>
                 </div>
             </div>
+        </div >
 
 
 
-            <div className="details-logement">
-                <div className="bloc3">
-                    <div className="desc">
-                        <p className="desc-text">Description</p>
-                        <img src={arrow} alt="Arrow" className="arrow-img" />
-                    </div>
-
-                    <div className="equip">
-                        <p className="equip-text">Équipments</p>
-                        <img src={arrow} alt="Arrow" className="arrow-img" />
-
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
 
     )
 }

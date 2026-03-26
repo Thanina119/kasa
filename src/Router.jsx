@@ -9,15 +9,18 @@ import Logement from "./pages/Logement"
 function Router() {
     return (
         <BrowserRouter>
-            <Header />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/logement" element={<Logement />} />
-            </Routes>
+            <div className="container">
+                <Header />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/logement/:id" element={<Logement />} />
+                </Routes>
+            </div>
 
             <Footer />
         </BrowserRouter>
+
     )
 }
 export default Router

@@ -1,15 +1,21 @@
+.logement-page {
+    width: 100%;
+    max-width: 1240px;
+    margin-top: 50px;
+
+}
+
 .title-loc {
     max-width: 635px;
     height: 77px;
     margin-top: 30px;
-    border: 2px solid red;
+
 }
 
 
 
 .logement-title {
     width: 635px;
-    font-family: 'Montserrat';
     font-weight: 500;
     color: #FF6060;
     font-size: 36px;
@@ -17,7 +23,6 @@
 }
 
 .logement-loc {
-    font-family: 'Montserrat';
     font-weight: 500;
     font-size: 18px;
     color: #000000;
@@ -25,26 +30,29 @@
     margin-top: 10px;
 }
 
-.tags {
+.tags-container {
     display: flex;
     gap: 10px;
     width: 365px;
     margin-top: 20px;
+    margin-bottom: 24px;
 
 }
 
-.tags span {
-    width: 115px;
+.tags {
+    min-width: 115px;
     height: 25px;
     font-size: 14px;
     font-weight: 700;
-    font-family: 'Montserrat';
     background-color: #FF6060;
     color: white;
     border-radius: 10px;
-    gap: 10px;
+    display: flex;
     align-items: center;
     justify-content: center;
+
+
+
 
 }
 
@@ -56,15 +64,15 @@
 
 .host {
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
+    justify-content: space-between;
 }
 
 .host-name {
     color: #FF6060;
     font-weight: 500;
     font-size: 18px;
-    font-family: 'Monserrat';
     margin-right: 10px;
 }
 
@@ -72,27 +80,38 @@
     color: #C4C4C4;
     width: 64px;
     height: 64px;
+    border-radius: 50%;
 }
 
 .rating {
-    width: 196px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 21px;
+}
+
+.star {
+    width: 36px;
     height: 36px;
+
 }
 
 .details-logement {
     max-width: 1240px;
-    border: 2px solid red;
+
 }
 
 
-.bloc3 {
+.collapse-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 76px;
 
 }
 
-.desc {
+.desc,
+.equip {
     width: 582px;
     height: 52px;
     border-radius: 5px;
@@ -100,9 +119,10 @@
     color: white;
     text-align: left;
     padding-left: 10px;
-    font-family: 'Montserrat';
     font-size: 18px;
     font-weight: 700;
+    margin-top: 24px;
+    margin-bottom: 50px;
 
     display: flex;
     justify-content: space-between;
@@ -113,5 +133,7 @@
 .arrow-img {
     width: 32px;
     height: 32px;
+    margin-right: 10px;
+    align-items: right;
 
 }

@@ -1,19 +1,22 @@
 .logement-container {
     width: 100%;
-    margin-top: 50px;
+
 }
 
 .carrousel {
-    max-width: 1240px;
+    width: 100%;
     position: relative;
     border-radius: 16px;
     overflow: hidden;
+    height: 415px;
 }
 
 .image {
-    width: 100%;
+
+    width: 1240px;
     height: 415px;
     object-fit: cover;
+    display: block;
 }
 
 
@@ -36,7 +39,6 @@
 .text {
     position: absolute;
     left: 50%;
-    font-family: "Montserrat";
     font-size: 18px;
     color: white;
     bottom: 24px;
