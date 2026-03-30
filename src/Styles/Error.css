@@ -1,0 +1,28 @@
+.error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+.error-number {
+    margin-top: 139px;
+    font-size: 288px;
+    font-weight: 700;
+    color: #FF6060
+}
+
+.error-text {
+    margin-top: 139px;
+    font-size: 36px;
+    font-weight: 500;
+    color: #FF6060;
+    margin-bottom: 139px;
+}
+
+.error-link {
+    font-size: 18px;
+    color: #000000;
+    text-decoration: underline;
+}

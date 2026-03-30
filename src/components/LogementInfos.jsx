@@ -1,11 +1,19 @@
 import "../Styles/LogementInfos.css"
 import starActive from "../assets/starActive.png"
 import starInactive from "../assets/starInactive.png"
+import arrow from "../assets/arrow.png"
+import { useState } from "react"
+
+
 
 
 function LogementInfos({ logement }) {
+
+    const [openDesc, setOpenDesc] = useState(false)
+    const [openEquip, setOpenEquip] = useState(false)
+
     return (
-        <div>
+        <div classame="logement-infos-wrapper">
             <div className="infos-logement" >
                 <div className="log-title">
                     <div className="title-loc" >
@@ -41,11 +49,49 @@ function LogementInfos({ logement }) {
                     </div>
                 </div>
             </div>
+
+            <div className="collapse-container">
+                <div className="collapse-box">
+                    <div className="desc" onClick={() => setOpenDesc(!openDesc)}>
+                        <p className="desc-text">Description</p>
+                        <img src={arrow} alt="Arrow" className="arrow-img" />
+                    </div>
+                    {openDesc && (
+                        <div className="collapse-content">
+                            <p>{logement.description}</p>
+                        </div>
+                    )}
+                </div>
+                <div className="collapse-box">
+                    <div className="equip" onClick={() => setOpenEquip(!openEquip)}>
+                        <p className="equip-text">Équipements</p>
+                        <img src={arrow} alt="Arrow" className="arrow-img" />
+                    </div>
+                    {openEquip && (
+                        <div className="collapse-content">
+                            {logement.equipments.map((equipement, index) => (
+                                <p key={index}>{equipement}</p>
+                            ))}
+                        </div>
+                    )}
+
+
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
         </div >
-
-
-
-
     )
 }
 export default LogementInfos;

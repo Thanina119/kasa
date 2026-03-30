@@ -25,7 +25,18 @@
     position: relative;
     overflow: hidden;
 
+}
 
+.card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 40%;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.7),
+            transparent);
 }
 
 .card-img {

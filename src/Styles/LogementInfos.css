@@ -1,7 +1,10 @@
-.logement-page {
+.logement-infos-wrapper {
     width: 100%;
     max-width: 1240px;
     margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+
 
 }
 
@@ -41,7 +44,7 @@
 
 .tags {
     min-width: 115px;
-    height: 25px;
+    padding: 6px 12px;
     font-size: 14px;
     font-weight: 700;
     background-color: #FF6060;
@@ -107,6 +110,16 @@
     justify-content: space-between;
     align-items: center;
     gap: 76px;
+    align-items: flex-start;
+    margin-bottom: 50px;
+
+}
+
+.collapse-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
 
 }
 
@@ -136,4 +149,13 @@
     margin-right: 10px;
     align-items: right;
 
+}
+
+.collapse-content {
+    font-size: 18px;
+}
+
+.collapse-content p {
+    text-align: left;
+    padding: 2px;
 }
