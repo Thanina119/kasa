@@ -69,9 +69,11 @@ function LogementInfos({ logement }) {
                     </div>
                     {openEquip && (
                         <div className="collapse-content">
-                            {logement.equipments.map((equipement, index) => (
-                                <p key={index}>{equipement}</p>
-                            ))}
+                            <ul>
+                                {logement.equipments.map((equipement, index) => (
+                                    <li key={index}>{equipement}</li>
+                                ))}
+                            </ul>
                         </div>
                     )}
 

@@ -135,7 +135,6 @@
     font-size: 18px;
     font-weight: 700;
     margin-top: 24px;
-    margin-bottom: 50px;
 
     display: flex;
     justify-content: space-between;
@@ -151,11 +150,26 @@
 
 }
 
-.collapse-content {
+.collapse-content p {
     font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+    text-align: left;
+    margin-top: 25px;
+
 }
 
-.collapse-content p {
+.collapse-content ul {
+    margin: 0;
+    list-style: none;
+    margin-left: 20px;
+    padding: 0;
+    margin-top: 25px;
+}
+
+.collapse-content li {
     text-align: left;
     padding: 2px;
+    color: #000000;
+    font-weight: 400;
 }
