@@ -24,7 +24,6 @@ function LogementInfos({ logement }) {
                     <div className="tags-container">
 
                         {logement.tags.map((tag) => (
-
                             <span className="tags" key={tag}>{tag}</span>
 
                         ))}
