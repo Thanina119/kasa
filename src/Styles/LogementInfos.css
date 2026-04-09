@@ -46,7 +46,7 @@
 }
 
 .tags {
-    width: 115px;
+    width: fit-content;
     height: 25px;
     font-size: 14px;
     font-weight: 700;
@@ -57,12 +57,11 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    padding: 0 10px;
 
 }
 
-.tag-text {
-    font-size: 14px;
-}
+
 
 .infos-logement {
     display: flex;
@@ -124,13 +123,11 @@
     width: 100%;
 }
 
-.desc,
-.equip {
-    width: 582px;
+.collapse-header {
+
     height: 52px;
     border-radius: 5px;
     background-color: #FF6060;
-    color: white;
     text-align: left;
     padding-left: 10px;
     font-size: 18px;
@@ -141,30 +138,40 @@
 
 }
 
+
 .arrow-img {
     width: 32px;
     height: 32px;
     margin-right: 10px;
-    align-items: right;
+    transition: transform 0.3s ease;
+
+}
+
+.arrow-img.open {
+    transform: rotate(180deg);
+}
+
+.collapse-titre {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    color: white;
 
 }
 
 .collapse-content p {
-    font-size: 18px;
-    font-weight: 400;
-    color: #000000;
     text-align: left;
+    font-size: 18px;
     margin-top: 25px;
     margin-left: 20px;
-
 }
 
 .collapse-content ul {
-    margin: 0;
     list-style: none;
     margin-left: 20px;
     padding: 0;
     margin-top: 25px;
+    margin-left: 20px;
 }
 
 .collapse-content li {
@@ -173,4 +180,159 @@
     color: #000000;
     font-weight: 400;
     font-size: 18px;
+
+}
+
+
+
+@media (max-width:768px) {
+    .logement-infos-wrapper {
+        width: auto;
+
+    }
+
+    .infos-logement {
+        display: flex;
+        flex-direction: column;
+        margin: 0 20px 27px 20px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .title-loc {
+        width: 100%;
+        margin-top: 0;
+
+    }
+
+    .logement-title {
+        width: 100%;
+        font-size: 18px;
+        line-height: 143%;
+    }
+
+    .logement-loc {
+        font-size: 14px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+
+
+    .tags-container {
+        display: flex;
+        flex: wrap;
+        gap: 10px;
+        margin-bottom: 0;
+    }
+
+    .tags {
+        display: flex;
+        flex: wrap;
+        height: auto;
+        font-size: 10px;
+        padding: 0 8px;
+    }
+
+
+
+    .details-host {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+    }
+
+    .host {
+        display: flex;
+        align-items: center;
+        align-self: flex-end;
+        gap: 10px;
+        order: 2;
+        margin-top: 16px;
+
+    }
+
+    .host-name {
+        font-size: 12px;
+        text-align: right;
+        line-height: 17px;
+        margin-right: 0;
+
+    }
+
+    .host-img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .rating {
+        display: flex;
+        gap: 2px;
+        margin-top: 24px;
+        order: 1;
+    }
+
+    .star {
+        width: 18px;
+        height: 18px;
+    }
+
+    .collapse-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px 20px 27px 20px;
+    }
+
+    .collapse-box {
+        width: 100%;
+
+    }
+
+    .collapse-header {
+        height: 30px;
+        padding-left: 10px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .collapse-titre {
+        font-size: 13px;
+        font-weight: 700;
+
+        text-align: left;
+    }
+
+    .arrow-img {
+        width: 16px;
+        height: auto;
+    }
+
+    .collapse-content p {
+        font-size: 12px;
+        line-height: 143%;
+        margin: 13px 20px 0 20px;
+        font-weight: 400;
+
+    }
+
+    .collapse-content li {
+        font-size: 12px;
+        line-height: 143%;
+        font-weight: 400;
+        padding: 0;
+
+    }
+
+    .collapse-content ul {
+        margin: 13px 20px 0 20px;
+
+    }
+
+
+
 }

@@ -44,3 +44,44 @@
     color: white;
     bottom: 24px;
 }
+
+
+
+@media (max-width: 768px) {
+    .carrousel {
+        height: auto;
+        width: auto;
+        margin: 27px 20px 15px 20px;
+        border-radius: 10px;
+
+    }
+
+    .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+
+    .left img,
+    .right img {
+        width: 12px;
+        height: 20px;
+        display: block;
+    }
+
+    .left {
+        left: 5px;
+    }
+
+    .right {
+        right: 5px;
+    }
+
+    .text {
+        display: none;
+    }
+
+
+}
