@@ -8,6 +8,8 @@ import Collapse from "./collapse"
 
 function LogementInfos({ logement }) {
 
+    const [firstName, lastName] = logement.host.name.split(" ")
+
 
     return (
         <div classame="logement-infos-wrapper">
@@ -31,7 +33,7 @@ function LogementInfos({ logement }) {
 
                 <div className="details-host">
                     <div className="host">
-                        <p className="host-name" >{logement.host.name}</p>
+                        <p className="host-name" >{firstName}<br />{lastName}</p>
                         <img src={logement.host.picture} alt="logement.host.name" className="host-img" />
 
                     </div>

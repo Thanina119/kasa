@@ -1,7 +1,7 @@
 
 import { useState } from "react"
 import arrow from "../assets/arrow.png"
-import "../Styles/LogementInfos.css"
+import "../Styles/Collapse.css"
 
 function Collapse({ title, children }) {
     const [isOpen, setIsOpen] = useState(false)

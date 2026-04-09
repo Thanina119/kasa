@@ -1,0 +1,139 @@
+.collapse-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 76px;
+    margin-bottom: 50px;
+
+}
+
+.collapse-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.collapse-header {
+
+    height: 52px;
+    border-radius: 5px;
+    background-color: #FF6060;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.arrow-img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+
+}
+
+.arrow-img.open {
+    transform: rotate(180deg);
+}
+
+.collapse-titre {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+    color: white;
+
+}
+
+.collapse-content p {
+    text-align: left;
+    font-size: 18px;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+.collapse-content ul {
+    list-style: none;
+    margin-left: 20px;
+    padding: 0;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+.collapse-content li {
+    text-align: left;
+    padding: 2px;
+    color: #000000;
+    font-weight: 400;
+    font-size: 18px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:768px) {
+    .collapse-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px 20px 27px 20px;
+    }
+
+    .collapse-box {
+        width: 100%;
+
+    }
+
+    .collapse-header {
+        height: 30px;
+        padding-left: 10px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .collapse-titre {
+        font-size: 13px;
+        font-weight: 700;
+
+        text-align: left;
+    }
+
+    .arrow-img {
+        width: 16px;
+        height: auto;
+    }
+
+    .collapse-content p {
+        font-size: 12px;
+        line-height: 143%;
+        margin: 13px 20px 0 20px;
+        font-weight: 400;
+
+    }
+
+    .collapse-content li {
+        font-size: 12px;
+        line-height: 143%;
+        font-weight: 400;
+        padding: 0;
+
+    }
+
+    .collapse-content ul {
+        margin: 13px 20px 0 20px;
+
+    }
+}
