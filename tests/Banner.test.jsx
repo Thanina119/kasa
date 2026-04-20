@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import Banner from '../src/components/Banner'
-import bannerImg from "../assets/banner-img.png"
+import bannerImg from "../src/assets/banner-img.png"
 
 describe('Banner', () => {
     test('affiche le texte passé en props', () => {
