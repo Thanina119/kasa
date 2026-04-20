@@ -1,5 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react'
-import Collapse from './Collapse'
+import Collapse from './collapse'
+import '@testing-library/jest-dom'
 
 describe('Collapse', () => {
     test('affiche le titre', () => {
@@ -9,7 +10,7 @@ describe('Collapse', () => {
             </Collapse>
         )
 
-        expect(screen.getByText('Description')).not.toBeNull()
+        expect(screen.getByText('Description')).toBeInTheDocument()
     })
 
     test('le contenu est caché au départ', () => {
@@ -31,7 +32,7 @@ describe('Collapse', () => {
 
         fireEvent.click(screen.getByText('Description'))
 
-        expect(screen.getByText('Mon contenu')).not.toBeNull()
+        expect(screen.getByText('Mon contenu')).toBeInTheDocument()
     })
 
     test('cache le contenu après 2 clics', () => {
